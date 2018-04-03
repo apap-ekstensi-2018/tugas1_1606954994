@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: APAPSI_Kemahasiswaan
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: RinjaniSamosir
+Implementation-Vendor-Id: com.example
+Build-Jdk: 1.8.0_161
+Implementation-URL: http://projects.spring.io/spring-boot/APAPSI_Kemah
+ asiswaan/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Lihat Kelulusan</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div th:replace="fragments/fragment :: header"></div>
+            <div class="row">
+        <div class="container">
+            <h2>Presentase Kelulusan</h2>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
+                    <strong>Tahun</strong>
+                </div>
+                <div class="col-md-8">
+                    <label th:text="${tahun_masuk}"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <strong>Program Studi</strong>
+                </div>
+                <div class="col-md-8">
+                    <label th:text="${prodi}"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <strong>Fakultas</strong>
+                </div>
+                <div class="col-md-8">
+                    <label th:text="${fakultas}"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <strong>Universitas</strong>
+                </div>
+                <div class="col-md-8">
+                    <label th:text="${universitas}"></label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <h1 th:text="${persentase} == 'NaN' ? '0 %' : ${persentase}  + ' %'"></h1>
+            </div>
+            <div class="row">
+                <h6 th:text="${jml_mhsLulus} + ' dari ' + ${jml_mhs} + ' Mahasiswa Telah Lulus'"></h6>
+            </div>
+        </div>
+    </div>
+        <div th:replace="fragments/fragment :: footer"></div>
+    </body>
+</html>

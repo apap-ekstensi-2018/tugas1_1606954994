@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<head>
+<title>Tambah Mahasiswa</title>
+</head>
+<body>
+	<div th:replace="fragments/fragment :: header"></div>
+	<div class="container">
+		<div>
+			<h3>Tambah Mahasiswa</h3>
+		</div>
+	</div>
+	<div class="container">
+		<form action="/mahasiswa/tambah" method="post">
+			<div class="form-group">
+				<label for="nama">Nama Lengkap :<input type="text" class="form-control" name="nama" required="required"/> </label> 
+			</div>
+			<div class="form-group">
+				<label for="tempat_lahir">Tempat Lahir :<input type="text" class="form-control" name="tempat_lahir" required="required"/> </label> 
+			</div> 
+			<div class="form-group">
+				<label for="tanggal_lahir">Tanggal Lahir :<input type="text" class="form-control" name="tanggal_lahir" required="required"/> </label> 
+			</div>
+			<div class="form-group">
+				<label for="tempat_lahir" required="required">Jenis Kelamin : </label> 
+				<select name="jenis_kelamin" class="form-control">
+					<option>--Pilih Jenis Kelamin--</option>	
+					<option value="1">Laki-laki</option>
+					<option value="0">Perempuan</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="agama" required="required">Agama : </label> 
+				<select name="agama" class="form-control">
+					<option value="Islam">Islam</option>
+					<option value="Protestan">Protestan</option>
+					<option value="Katolik">Katolik</option>
+					<option value="Hindu">Hindu</option>
+					<option value="Budha">Budha</option>
+					<option value="Konghucu">Konghucu</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="golongan_darah" required="required">Golongan Darah : </label> 
+				<select name="golongan_darah" class="form-control">
+					<option>--Pilih Golongan Darah--</option>	
+					<option value="AB+">AB+</option>
+					<option value="AB-">AB-</option>
+					<option value="A+">A+</option>
+					<option value="A-">A-</option>
+					<option value="B+">B+</option>
+					<option value="B-">B-</option>
+					<option value="O+">O+</option>
+					<option value="O-">O-</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="tahun_masuk" required="required">Tahun Masuk :<input type="text" class="form-control" name="tahun_masuk"/> </label> 
+			</div>
+			<div class="form-group">
+				<label for="jalur_masuk" required="required">Jalur Masuk : </label> 
+				<select name="jalur_masuk" class="form-control">
+					<option value="Undangan Olimpiade">Undangan Olimpiade</option>
+					<option value="Undangan Reguler/SNMPTN">Undangan Reguler/SNMPTN</option>
+					<option value="Undangan Paralel/PPKB">Undangan Paralel/PPKB</option>
+					<option value="Ujian Tulis Bersama/SBMPTN">Ujian Tulis Bersama/SBMPTN</option>
+					<option value="Ujian Tulis Mandiri">Ujian Tulis Mandiri</option>
+				</select>
+			</div>
+			<div class="form-group" required="required">
+				<label for="id_prodi">Id Program Studi :<input type="text" class="form-control" name="id_prodi"/> </label> 
+			</div>
+			<button type="submit" name="action" value="simpan" class = "btn btn-primary">Simpan</button>
+		</form>
+	</div>
+	<div th:replace="fragments/fragment :: footer"></div>
+</body>
+</html>

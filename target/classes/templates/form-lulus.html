@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<title>Presentase Kelulusan</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<div th:replace="fragments/fragment :: header"></div>
+	
+	<h1 class="page-header" align="center">Presentase Kelulusan</h1>
+
+	<form action="/kelulusan" method="get" class="container">
+	<div class="form-group">
+            <div class="col-md-2">
+                <label for="tahun_masuk">Tahun</label>
+            </div>
+            <div class="col-md-4">
+                <input type="text" name="tahun_masuk" class="form-control"/>
+            </div>
+		</div>
+	<div class="form-group">
+            <div class="col-md-2">
+                <label for="id_prodi">Program Studi</label>
+            </div>
+            <div class="col-md-4">
+                <input type="text" name="prodi" class="form-control"/>
+            </div>
+		</div>
+	<div>
+			<button type="submit" class="btn btn-primary ">Lihat</button>
+		</div>
+	</form>
+<div th:replace="fragments/fragment :: footer"></div>
+</body>
+
+</html>
